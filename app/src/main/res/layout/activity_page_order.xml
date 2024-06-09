@@ -8,13 +8,14 @@
     tools:context=".PageOrder">
 
     <ImageButton
-        android:id="@+id/backByrButton"
-        android:layout_width="46dp"
-        android:layout_height="46dp"
+        android:id="@+id/backByrBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:background="@android:color/transparent"
-        app:srcCompat="@drawable/back_arrow"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="41dp" />
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_arrow"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="45dp" />
 
     <TextView
         android:id="@+id/alamat"
