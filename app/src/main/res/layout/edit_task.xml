@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="84dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/baseline_arrow_back_ios_new_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addtasktitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/plus_jakarta_sans_semibold"
+        android:paddingTop="80dp"
+        android:text="Edit Task"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        tools:ignore="MissingConstraints"
+
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/titledesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:text="Task Title"
+        android:textColor="#374151"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addtasktitle" />
+
+    <EditText
+        android:id="@+id/titlefield"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:inputType="text"
+        android:background="@drawable/bg_field"
+        android:background="@drawable/border"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:hint="Write title task"
+        android:paddingLeft="15dp"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titledesc"
+
+        />
+
+    <TextView
+        android:id="@+id/taskgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:text="Task Group"
+        android:textColor="#374151"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titlefield" />
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/fieldPwd"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        >-->
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/taskgroup"
+        android:text="Task Group"
+        android:textSize="16dp"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:textColor="#374151"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+
+    <TextView
+        android:id="@+id/deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:text="Deadline"
+        android:textColor="#374151"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="344dp" />
+
+    <EditText
+        android:id="@+id/deadlinefield"
+        android:layout_width="363dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:hint="Choose date"
+        android:inputType="date"
+        android:paddingLeft="15dp"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="378dp" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:text="Description"
+        android:textColor="#374151"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deadlinefield" />
+
+
+    <EditText
+        android:id="@+id/descfield"
+        android:layout_width="362dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:hint="Write description"
+        android:inputType="textMultiLine"
+        android:paddingLeft="15dp"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/desc" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="160dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#3606C0"
+        android:fontFamily="@font/plus_jakarta_sans_semibold"
+        android:text="Save"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descfield" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/buttonsqinvert"
+        android:fontFamily="@font/plus_jakarta_sans_semibold"
+        android:text="Delete"
+        android:textColor="#3606C0"
+        android:textSize="15dp"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descfield" />
+
+
+    <!--    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
