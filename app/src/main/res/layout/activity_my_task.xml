@@ -5,38 +5,56 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".My_Task">
+    tools:context=".MyTask">
 
     <TextView
         android:id="@+id/myTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginBottom="562dp"
         android:fontFamily="@font/plus_jakarta_sans_bold"
         android:text="My Task"
         android:textColor="@color/black"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/addNewTask"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="44dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allTask"
+        android:layout_width="381dp"
+        android:layout_height="237dp"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="101dp" />
+
+    <TextView
+        android:id="@+id/buatTaroFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/plus_jakarta_sans_bold"
+        android:text="Taro filter nanti ganti"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/filteredTask"
+        android:layout_width="381dp"
+        android:layout_height="230dp"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="399dp" />
 
     <Button
         android:id="@+id/addNewTask"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="361dp"
+        android:layout_height="48dp"
         android:background="@drawable/button_square"
         android:fontFamily="@font/plus_jakarta_sans_bold"
         android:text="Add new task"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myTask" />
+        app:backgroundTint="@null"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="667dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
