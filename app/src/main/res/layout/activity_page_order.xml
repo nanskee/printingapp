@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PageOrder">
+
+    <ImageButton
+        android:id="@+id/backByrBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintEnd_toEndOf="@+id/alamat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="87dp"
+        android:layout_marginBottom="7dp"
+        android:fontFamily="@font/plus_jakarta_sans_bold"
+        android:text="Alamat"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/fieldAlamat"
+        app:layout_constraintStart_toStartOf="@+id/fieldAlamat"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/fieldAlamat"
+        android:layout_width="349dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_field"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:hint="Alamat pelanggan"
+        android:paddingLeft="15dp"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/detailPesanan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alamat" />
+
+    <TextView
+        android:id="@+id/detailPesanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="129dp"
+        android:fontFamily="@font/plus_jakarta_sans_bold"
+        android:text="Detail Pesanan"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/opsiPengiriman"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/fieldAlamat"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/byrButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/button_square"
+        android:fontFamily="@font/plus_jakarta_sans_bold"
+        android:text="Bayar Sekarang"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/opsiPengiriman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/plus_jakarta_sans_bold"
+        android:text="Opsi Pengiriman"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/pilihKirim"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/detailPesanan"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/metodePembayaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/plus_jakarta_sans_bold"
+        android:text="Metode Pembayaran"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/totalPesanan"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pilihKirim"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/totalPesanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="160dp"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:text="Total Pesanan :"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/byrButton"
+        app:layout_constraintStart_toStartOf="@+id/metodePembayaran"
+        app:layout_constraintTop_toBottomOf="@+id/metodePembayaran"
+        tools:ignore="MissingConstraints" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="223dp"
+        android:layout_marginEnd="27dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </TableLayout>
+
+    <Spinner
+        android:id="@+id/pilihKirim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="21dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/metodePembayaran"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opsiPengiriman" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="462dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="177dp"
+        app:layout_constraintBottom_toTopOf="@+id/byrButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/metodePembayaran"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_gopay_vector" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
