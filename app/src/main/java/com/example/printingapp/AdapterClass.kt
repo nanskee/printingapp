@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 class AdapterClass(private val dataList: ArrayList<TaskData>): RecyclerView.Adapter<AdapterClass.ViewHolderClass>{
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderClass {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.task_layout)
     }
 
     override fun getItemCount(): Int {

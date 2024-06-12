@@ -17,7 +17,6 @@
         android:paddingTop="80dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-
         />
 
     <TextView
@@ -47,7 +46,6 @@
         android:hint="Write title task"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/bg_field"
         android:paddingLeft="15dp"
         android:background="@drawable/border"
 
@@ -65,22 +63,41 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/border"
         />
-    <EditText
-        android:id="@+id/taskgroupfield"
-        android:layout_width="match_parent"
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/taskgroup"
-        android:textSize="13dp"
+        android:text="Task Group"
+        android:textSize="16dp"
         android:fontFamily="@font/plus_jakarta_sans_medium"
-        android:layout_marginTop="10dp"
-        android:hint="Password"
+        android:textColor="#374151"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/border"
-        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp"
         />
+
+
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/taskgroupfield"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/taskgroup"-->
+    <!--        android:textSize="13dp"-->
+    <!--        android:fontFamily="@font/plus_jakarta_sans_medium"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:hint="Password"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:layout_marginRight="20dp"-->
+    <!--        android:background="@drawable/border"-->
+    <!--        android:paddingLeft="15dp"-->
+    <!--        />-->
 
     <!--    <LinearLayout-->
     <!--        android:layout_width="match_parent"-->
@@ -99,7 +116,7 @@
         android:textSize="16dp"
         android:fontFamily="@font/plus_jakarta_sans_medium"
         android:textColor="#374151"
-        app:layout_constraintTop_toBottomOf="@id/taskgroupfield"
+        app:layout_constraintTop_toBottomOf="@id/spinner"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -119,6 +136,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/border"
+        android:drawableEnd="@drawable/calendar_today_24dp_fill0_wght400_grad0_opsz24"
+        android:clickable="true"
         android:paddingLeft="15dp"
         />
 
@@ -130,7 +149,7 @@
         android:textSize="16dp"
         android:fontFamily="@font/plus_jakarta_sans_medium"
         android:textColor="#374151"
-        app:layout_constraintTop_toBottomOf="@id/taskgroupfield"
+        app:layout_constraintTop_toBottomOf="@id/spinner"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
