@@ -21,12 +21,19 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/allTask"
-        tools:itemCount="3"
-        tools:listitem="@layout/task_layout"
         android:layout_width="match_parent"
-        android:layout_height="237dp"
+        android:layout_height="300dp"
+        tools:itemCount="3"
         tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="101dp" />
+        tools:layout_editor_absoluteY="101dp"
+        tools:listitem="@layout/task_layout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/filteredTask"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="451dp" />
 
     <TextView
         android:id="@+id/buatTaroFilter"
@@ -38,14 +45,7 @@
         android:textSize="18dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="362dp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/filteredTask"
-        android:layout_width="381dp"
-        android:layout_height="160dp"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="399dp" />
+        tools:layout_editor_absoluteY="414dp" />
 
     <Button
         android:id="@+id/addNewTask"

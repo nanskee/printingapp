@@ -10,20 +10,26 @@ class AdapterClass(private val dataList: ArrayList<TaskData>): RecyclerView.Adap
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderClass {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.task_layout,parent,false)
-    }
-
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return ViewHolderClass(itemView)
     }
 
     override fun onBindViewHolder(holder: ViewHolderClass, position: Int) {
-        TODO("Not yet implemented")
+        val currentItem = dataList[position]
+        holder.rvTaskName.text = currentItem.dataTask
+        holder.rvTaskGroup.text = currentItem.dataGroup
+        holder.rvTaskDeadline.text = currentItem.dataDeadline
+
     }
+
+    override fun getItemCount(): Int {
+        return dataList.size
+    }
+
 
     class ViewHolderClass(itemView: View): RecyclerView.ViewHolder(itemView){
         val rvTaskName:TextView = itemView.findViewById(R.id.taskName)
         val rvTaskDeadline:TextView  = itemView.findViewById(R.id.taskDeadline)
-        val rvTaskCategory:TextView  = itemView.findViewById(R.id.taskCategory)
+        val rvTaskGroup:TextView  = itemView.findViewById(R.id.taskGroup)
     }
 
 }
