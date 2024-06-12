@@ -21,7 +21,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/allTask"
-        android:layout_width="381dp"
+        tools:itemCount="3"
+        tools:listitem="@layout/task_layout"
+        android:layout_width="match_parent"
         android:layout_height="237dp"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="101dp" />
@@ -41,7 +43,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/filteredTask"
         android:layout_width="381dp"
-        android:layout_height="230dp"
+        android:layout_height="160dp"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="399dp" />
 
