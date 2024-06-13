@@ -53,7 +53,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:inputType="text"
-        android:background="@drawable/bg_field"
         android:background="@drawable/border"
         android:fontFamily="@font/plus_jakarta_sans_medium"
         android:hint="Write title task"
@@ -98,7 +97,7 @@
         android:textColor="#374151"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="20dp"/>
 
     <TextView
         android:id="@+id/deadline"
@@ -110,7 +109,8 @@
         android:textColor="#374151"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="344dp" />
+        tools:layout_editor_absoluteY="344dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/deadlinefield"
@@ -124,7 +124,8 @@
         android:paddingLeft="15dp"
         android:textSize="13dp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="378dp" />
+        tools:layout_editor_absoluteY="378dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/desc"

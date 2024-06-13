@@ -6,7 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class AdapterClass(private val dataList: ArrayList<TaskData>): RecyclerView.Adapter<AdapterClass.ViewHolderClass>{
+class AdapterClass(private val dataList: ArrayList<TaskData>):
+    RecyclerView.Adapter<AdapterClass.ViewHolderClass>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderClass {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.task_layout,parent,false)
@@ -17,7 +18,7 @@ class AdapterClass(private val dataList: ArrayList<TaskData>): RecyclerView.Adap
         val currentItem = dataList[position]
         holder.rvTaskName.text = currentItem.dataTask
         holder.rvTaskGroup.text = currentItem.dataGroup
-        holder.rvTaskDeadline.text = currentItem.dataDeadline
+        holder.rvTaskDeadline.text = currentItem.dataDeadline.toString()
 
     }
 
