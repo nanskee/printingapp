@@ -16,9 +16,9 @@ class AdapterClass(private val dataList: ArrayList<TaskData>):
 
     override fun onBindViewHolder(holder: ViewHolderClass, position: Int) {
         val currentItem = dataList[position]
-        holder.rvTaskName.text = currentItem.dataTask
-        holder.rvTaskGroup.text = currentItem.dataGroup
-        holder.rvTaskDeadline.text = currentItem.dataDeadline.toString()
+        holder.rvTaskName.text = currentItem.title
+        holder.rvTaskGroup.text = currentItem.category
+        holder.rvTaskDeadline.text = currentItem.deadline.toString()
 
     }
 
@@ -34,3 +34,6 @@ class AdapterClass(private val dataList: ArrayList<TaskData>):
     }
 
 }
+
+
+
